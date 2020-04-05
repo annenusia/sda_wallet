@@ -10,6 +10,8 @@ public class Money {
         this.currency = currency;
     }
 
+    public Money(){}
+
     public int getBalance() { return balance; }
 
     public Currency getCurrency() { return currency; }

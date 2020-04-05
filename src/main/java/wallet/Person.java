@@ -5,6 +5,8 @@ public class Person {
     private String name;
     private Money money;
 
+    Wallet wallet = new Wallet();
+
     public Person(String name, Money money) {
         this.name = name;
         this.money = money;
@@ -19,12 +21,12 @@ public class Person {
     }
 
     public void giveMoney (Person giver, int amount){
-       giver.money.subtractMoney(amount);
+       giver.wallet.money.subtractMoney(amount);
        takeMoney(giver, amount);
     }
 
     public void takeMoney(Person recever, int amount){
-        recever.money.addMoney(amount);
+        recever.wallet.money.addMoney(amount);
     }
 
 

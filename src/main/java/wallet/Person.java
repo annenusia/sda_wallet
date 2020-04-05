@@ -12,6 +12,10 @@ public class Person {
         this.money = money;
     }
 
+    public Person(String name){
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -20,9 +24,9 @@ public class Person {
         return money;
     }
 
-    public void giveMoney (Person giver, int amount){
+    public void giveMoney (Person giver, Person recever, int amount){
        giver.wallet.money.subtractMoney(amount);
-       takeMoney(giver, amount);
+       takeMoney(recever, amount);
     }
 
     public void takeMoney(Person recever, int amount){
